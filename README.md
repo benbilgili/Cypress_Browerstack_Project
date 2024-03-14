@@ -2,7 +2,7 @@
 
 <h4>This project showcases the integration of Cypress tests with Browserstack to facilitate testing across multiple browsers and devices.</h4>
 
-**Steps To Replicate:**
+<h3>**Steps To Replicate:**</h3>
 
 Clone this repository:
 * git clone <repository-url>
