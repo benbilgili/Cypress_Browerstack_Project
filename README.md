@@ -1,5 +1,6 @@
-Cypress_Browserstack_Project
-This project showcases the integration of Cypress tests with Browserstack to facilitate testing across multiple browsers and devices.
+<h2>Cypress/Browserstack Project</h2>
+
+<h4>This project showcases the integration of Cypress tests with Browserstack to facilitate testing across multiple browsers and devices.</h4>
 
 **Steps To Replicate:**
 
