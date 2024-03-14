@@ -2,7 +2,7 @@
 
 <h4>This project showcases the integration of Cypress tests with Browserstack to facilitate testing across multiple browsers and devices.</h4>
 
-<h3>**Steps To Replicate:**</h3>
+<h3>Steps To Replicate:</h3>
 
 Clone this repository:
 * git clone <repository-url>
@@ -19,7 +19,7 @@ Clone this repository:
 **Run tests:**
 * browserstack-cypress run
 
-**Steps Taken:**
+<h3>Steps Taken:</h3>
 * Created a new Cypress spec file to test the Edgewords Demo site.
 * Installed the npm Browserstack package.
 * Configured Browserstack details in the browserstack.json file, specifying browsers (including versions) and devices for testing.
