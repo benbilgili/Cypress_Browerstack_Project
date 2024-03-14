@@ -20,8 +20,8 @@ Clone this repository:
 * browserstack-cypress run
 
 <h3>Steps Taken:</h3>
-* Created a new Cypress spec file to test the Edgewords Demo site.
-* Installed the npm Browserstack package.
-* Configured Browserstack details in the browserstack.json file, specifying browsers (including versions) and devices for testing.
-* Monitored test results on the Browserstack Automation webpage. (See the screenshots folder for images.)
+* Created a new Cypress spec file to test the Edgewords Demo site. <br>
+* Installed the npm Browserstack package. <br>
+* Configured Browserstack details in the browserstack.json file, specifying browsers (including versions) and devices for testing. <br>
+* Monitored test results on the Browserstack Automation webpage. (See the screenshots folder for images.) <br>
 
