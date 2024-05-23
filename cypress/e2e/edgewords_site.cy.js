@@ -2,6 +2,8 @@ const NavBar = require("../pages/NavBar");
 const LoginPage = require("../pages/LoginPage");
 const ClothingItemPage = require("../pages/ClothingItemPage");
 const BasketPage = require("../pages/BasketPage");
+const CheckoutPage = require("../pages/CheckoutPage")
+const MyAccountPage = require("../pages/MyAccountPage")
 
 
 beforeEach(function () {
@@ -42,6 +44,28 @@ describe('Ecommerce', () => {
           
         })
   })
+  })
+  it('Can login to Ecommerce, purchase an item of clothing and go through checkout. It will capture the order number and check that this is present in My Orders', () => {
+      // click proceed to checkout
+      cy.get('.alt.button.checkout-button.wc-forward').click();
+    
+      // enter billing details
+      CheckoutPage.completeCheckout("Ben", "Bilgili", "46/2 The Paddockholm", "Edinburgh", "EH12 7XP", "07714589654", "ben.b@ben.com")
+
+      // capture order number
+      cy.get(".order > strong").invoke('text').then((text) => {
+        cy.log("Text: " + text)
+        const orderNumber = text;
+        
+        // click my account
+        NavBar.goPlace(NavBar.myAccountLink)
+        
+        // click orders
+        MyAccountPage.goToMyOrders();
+
+        // verify that order number saved is there
+        cy.get('td.woocommerce-orders-table__cell').find('a').first().should('contain', orderNumber)
+        })
   })
 })
 
