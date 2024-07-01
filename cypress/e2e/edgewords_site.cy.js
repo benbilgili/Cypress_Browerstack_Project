@@ -32,6 +32,7 @@ describe('Ecommerce', () => {
 
     // Apply discount code and verify that it takes 15% off total
     cy.get(".cart-subtotal > td > .amount.woocommerce-Price-amount > bdi").invoke('text').then((text) => {
+      // regex to get just the number
         const cleanedAmount = text.replace(/[^0-9.]/g, '');
         const floatAmount = parseFloat(cleanedAmount);
         const fullPriceInPennies = Math.round(floatAmount * 100); 
@@ -41,7 +42,6 @@ describe('Ecommerce', () => {
           const discountInPennies = cleanedDiscountAmount ? Math.round(parseFloat(cleanedDiscountAmount[1]) * 100) : null;
           let percentageDiscount = ((discountInPennies/fullPriceInPennies)*100)
           expect(percentageDiscount).to.equal(15)
-          
         })
   })
   })

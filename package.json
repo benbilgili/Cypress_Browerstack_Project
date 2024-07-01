@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.7.0"
+    "cypress": "^13.7.0",
+    "cypress-dotenv": "^2.0.0"
   },
   "dependencies": {
-    "browserstack-cypress-cli": "^1.29.1"
+    "browserstack-cypress-cli": "^1.29.1",
+    "dotenv": "^16.4.5"
   }
 }

@@ -10,6 +10,7 @@ class CheckoutPage {
 
     placeOrderButton = "button#place_order"
     
+    orderNumberElement = ".order > strong"
 
   
     // Actions
@@ -24,6 +25,8 @@ class CheckoutPage {
 
         cy.get(this.placeOrderButton).click();
     }
+
+    
 
 
 
